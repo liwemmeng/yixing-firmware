@@ -3,9 +3,9 @@
   "board": "xingzhi-cube-1.54tft-wifi",
   "chip": "esp32s3",
   "version": "2.4.5",
-  "url": "https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/firmware/yixing-xingzhi-cube-1.54tft-wifi-v2.4.5.bin",
-  "size": 4454848,
-  "sha256": "499a79ca0ea82eb4268ea6563e88db2cb9348199e06f40c802d3a9cf0f068028",
+  "url": "https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/firmware/yixing-xingzhi-cube-1.54tft-wifi-v2.4.5-stable.bin",
+  "size": 4454864,
+  "sha256": "5e5772fd256822129301ca960b3520f28fae15561698501a1134d3347362854e",
   "mandatory": false,
   "notes": "修复 OTA 板型校验，支持在线升级确认提示"
 }
