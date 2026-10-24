@@ -2,10 +2,16 @@
   "schema": 1,
   "board": "xingzhi-cube-1.54tft-wifi",
   "chip": "esp32s3",
-  "version": "2.4.8",
-  "url": "https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/firmware/yixing-xingzhi-cube-1.54tft-wifi-v2.4.8-stable.bin",
-  "size": 4460208,
-  "sha256": "8c300ea6ef01e2c18421185f68e75b62d38153310f6dc3198e42eaabaa2bc628",
+  "version": "2.4.9",
+  "url": "https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/firmware/yixing-xingzhi-cube-1.54tft-wifi-v2.4.9-stable.bin",
+  "size": 4467472,
+  "sha256": "c0bd6015126df95fc3d885850a26b343ec5bc1070f78e97fc6a74e7415678837",
   "mandatory": false,
-  "notes": "v2.4.8：兼容旧资源分区音效，增强触摸稳定性与 OTA 启动容错"
+  "notes": "v2.4.9：修复软件重启掉电，并支持普通 OTA 自动迁移外部音效资源",
+  "assets": {
+    "version": "2.4.9",
+    "url": "https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/firmware/yixing-xingzhi-cube-1.54tft-wifi-assets-v2.4.9-stable.bin",
+    "size": 5610089,
+    "sha256": "0875eab0aa2f684147db4cd4b3e21e2d68bbacd6fd158dbc250ec26361880a27"
+  }
 }

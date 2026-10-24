@@ -1,6 +1,6 @@
 # 义星固件 OTA
 
-本仓库用于发布义星设备的 OTA 应用固件。
+本仓库用于发布义星设备的 OTA 应用固件和外部资源包。
 
 ## 当前支持的设备
 
@@ -31,7 +31,8 @@ https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/stable/latest.j
 
 ## 文件说明
 
-- GitHub Releases 中的 `.bin` 文件是 OTA 专用 APP 镜像。
+- `firmware/` 中不带 `assets` 的 `.bin` 文件是 OTA 专用 APP 镜像。
+- `firmware/` 中带 `assets` 的 `.bin` 文件是外部资源分区镜像，由支持资源 OTA 的 APP 按清单自动下载。
 - OTA 只使用项目构建输出中的 `build/xiaozhi.bin`。
 - 不要使用 `merged-binary.bin`、`bootloader.bin` 或 `partition-table.bin` 进行 APP OTA。
 - 根目录 `latest.json` 是内测设备检查更新时读取的版本清单。
@@ -42,8 +43,8 @@ https://raw.githubusercontent.com/liwemmeng/yixing-firmware/main/stable/latest.j
 1. 使用正确板型和 ESP-IDF 版本完成最终构建。
 2. 确认 `build/xiaozhi.bin` 不超过 APP 分区上限。
 3. 计算最终固件的文件大小和 SHA-256。
-4. 创建新的 GitHub Release 或上传不可变的原始 `.bin` 文件。
-5. 确认下载链接可用后，先更新根目录 `latest.json`，仅向内测设备推送。
+4. 上传不可变的 APP `.bin`；发布外部资源时，同时上传不可变的资源 `.bin`。
+5. 确认所有下载链接、文件大小和 SHA-256 可用后，再更新对应通道清单；清单必须最后提交。
 6. 在内测设备上验证下载、SHA-256 校验、分区切换、重启和主要功能。
 7. 验证通过后不要重新编译，直接将已经验证的同一个 `.bin`、大小和 SHA-256 写入 `stable/latest.json`。
 
